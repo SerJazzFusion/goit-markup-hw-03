@@ -14,8 +14,6 @@
   --bgcolor-btn: #188ce8;
 }
 
-
-
 /* Утилиты и общие правила */
 
 .visually-hidden {
@@ -50,7 +48,7 @@ ul {
 }
 
 .container {
-  width: 1170x;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -63,15 +61,6 @@ ul {
 }
 
 /* Шапка */
-
-.header,
-.card {
-  background-color: var(--main-bgc-text);
-}
-
-.card {
-  border-radius: 0px 0px 4px 4px;
-}
 
 .header {
   border-bottom: 1px solid var(--line-color);
@@ -121,7 +110,6 @@ ul {
 .header-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .container.header-flex {
@@ -175,14 +163,10 @@ ul {
   text-align: center;
 }
 
-.hero-box {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
-.hero,
-.footer {
+.hero {
   background-color: var(--third-bgc-color);
+  padding: 200px 0;
+  text-align: center;
 }
 
 .hero-title {
@@ -228,9 +212,11 @@ ul {
 .section.about {
   padding-bottom: 0;
 }
+.benefits-item .text {
+  line-height: 1.71;
+}
 
 .benefits .list-style,
-.team .list-style,
 .filter .list-style {
   justify-content: center;
 }
@@ -296,12 +282,15 @@ ul {
   padding-bottom: 94px;
 }
 
-.team-img {
-  margin-bottom: 30px;
-}
-
 .team-item {
   margin-right: 30px;
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.team-img {
+  display: block;
 }
 
 .team-title {
@@ -323,35 +312,32 @@ ul {
 .team .text {
   font-size: 16px;
   text-align: center;
+}
+.team-undercard {
+  padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--main-bgc-text);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* Подвал */
+
+.footer {
+  background-color: var(--third-bgc-color);
+}
 
 .footer-logo-side,
 .address {
   color: var(--main-bgc-text);
 }
 
-.footer-logo.line {
-  margin-bottom: 20px;
-}
-
-.address-all {
-  width: 231px;
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address-all .list-style {
-  flex-wrap: wrap;
-}
-
-.address-item {
-  display: block;
-}
-
-.address.line,
-.mail.line {
-  margin-bottom: 9px;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .address,
@@ -410,9 +396,14 @@ ul {
 }
 
 .card-work {
+  width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
   background: var(--main-bgc-text);
+}
+
+.card-work:nth-child(3n) {
+  margin-right: 0;
 }
 
 .card-work:nth-last-child(-n + 3) {
