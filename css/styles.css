@@ -60,11 +60,19 @@ ul {
   padding-bottom: 94px;
 }
 
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 /* Шапка */
 
 .header {
   border-bottom: 1px solid var(--line-color);
   font-weight: 500;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-logo,
@@ -76,11 +84,6 @@ ul {
 
 .header-logo.line {
   margin-right: 93px;
-}
-
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .header-logo-side {
@@ -110,11 +113,6 @@ ul {
 .header-flex {
   display: flex;
   align-items: center;
-}
-
-.container.header-flex {
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .link {
@@ -165,7 +163,8 @@ ul {
 
 .hero {
   background-color: var(--third-bgc-color);
-  padding: 200px 0;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
 }
 
@@ -217,7 +216,7 @@ ul {
 }
 
 .benefits .list-style,
-.filter .list-style {
+.filter .list-style.btn {
   justify-content: center;
 }
 
@@ -236,6 +235,7 @@ ul {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.14;
+  font-size: 14px;
 }
 
 .text {
@@ -283,12 +283,14 @@ ul {
 }
 
 .team-item {
-  margin-right: 30px;
-
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team-img {
   display: block;
 }
@@ -313,6 +315,7 @@ ul {
   font-size: 16px;
   text-align: center;
 }
+
 .team-undercard {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -324,6 +327,15 @@ ul {
 
 .footer {
   background-color: var(--third-bgc-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.address-all {
+  margin-top: 20px;
+}
+
+.address-style {
+  list-style: none;
 }
 
 .footer-logo-side,
@@ -333,11 +345,6 @@ ul {
 
 .address-item:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.address-all .list-style {
-  flex-direction: column;
-  margin-top: 20px;
 }
 
 .address,
@@ -365,7 +372,7 @@ ul {
 
 .exmp-button {
   padding: 6px 22px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 
   background-color: var(--second-bgc-color);
   color: var(--primary-text-color);
@@ -379,6 +386,10 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   border-radius: 4px;
+}
+
+.list-style.btn {
+  margin-bottom: 50px;
 }
 
 .exmp-button:hover,
@@ -410,7 +421,8 @@ ul {
   margin-bottom: 0;
 }
 
-.filter .card.list-style {
+.card.list-style {
+  display: flex;
   flex-wrap: wrap;
 }
 
